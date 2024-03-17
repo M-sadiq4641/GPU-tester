@@ -26,12 +26,12 @@ a {
 
 @font-face {
   font-family: gilory;
-  src: url(/Gilroy-Medium.ttf);
+  src: url(/fonts/Gilroy-Medium.ttf);
 }
 
 @font-face {
   font-family: prototype;
-  src: url(/Prototype.ttf);
+  src: url(/fonts/Prototype.ttf);
 }
 
 h1 {
@@ -41,18 +41,28 @@ h1 {
 body {
   font-family: gilory;
   color: white;
-  background-color: #17191c;
+  background-color: #242629;
 }
 
 /* nav wrapper starts from here */
 
 .hero-BG {
-  background-image: url(/hero-bg.png);
+  position: relative;
 
   min-height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.hero-bg-main {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  @media (max-width: 992px) {
+    object-fit: cover;
+  }
 }
 
 .nav-wrapper {
@@ -208,18 +218,37 @@ body {
 /* hero section ends here */
 
 /* intro section starts from here */
+
+.intro-features-main {
+  position: relative;
+  min-height: 200vh;
+  isolation: isolate;
+}
+
+.features-BG {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: -1;
+
+  @media (max-width: 992px) {
+    object-fit: cover;
+  }
+}
+
 .intro-section {
-  margin-block: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-block: 15rem;
 
   @media (max-width: 992px) {
-    margin-block: 6rem;
+    padding-block: 8rem;
   }
 
   @media (max-width: 768px) {
-    margin-block: 4rem;
+    padding-block: 5rem;
   }
 
   h2 {
@@ -364,20 +393,23 @@ body {
   }
 
   @media (max-width: 576px) {
-    width: 280px;
+    width: 100%;
     margin-inline: auto;
   }
 }
 
 /* intro section ends here */
 
+/* features section starts from here */
+
 .features-container {
+  padding-block: 5rem;
   h2 {
     font-size: 144px;
     font-weight: 400;
     text-align: center;
     color: #ffffff1a;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 
     @media (max-width: 768px) {
       font-size: 90px;
@@ -392,9 +424,15 @@ body {
 .features-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center;
+  gap: 1rem;
 
   div {
     padding-top: 1rem;
+
+    @media (max-width: 576px) {
+      width: 100px;
+    }
     p {
       font-size: 28px;
       font-weight: 400;
@@ -405,6 +443,10 @@ body {
       @media (max-width: 992px) {
         font-size: 22px;
       }
+
+      @media (max-width: 576px) {
+        font-size: 18px;
+      }
     }
 
     span {
@@ -413,10 +455,6 @@ body {
 
     img {
       cursor: pointer;
-      width: 60px;
-      @media (max-width: 992px) {
-        width: 35px;
-      }
     }
   }
 
@@ -430,13 +468,6 @@ body {
 
       @media (max-width: 992px) {
         font-size: 22px;
-      }
-    }
-
-    img {
-      width: 70px;
-      @media (max-width: 992px) {
-        width: 45px;
       }
     }
 
@@ -466,7 +497,7 @@ body {
     text-align: left;
     width: 70%;
     color: #909090;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 
     @media (max-width: 992px) {
       font-size: 24px;
@@ -490,3 +521,44 @@ body {
     }
   }
 }
+
+/* features section ends here */
+
+/* take section starts from here */
+
+.take-wrapper {
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+
+  @media (max-width: 992px) {
+    min-height: 70vh;
+  }
+
+  @media (max-width: 576px) {
+    min-height: 40vh;
+  }
+}
+
+.take-BG {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+
+  @media (max-width: 992px) {
+    object-fit: cover;
+  }
+}
+
+.take-image {
+  position: absolute;
+  margin: auto;
+  inset: 0;
+
+  @media (max-width: 1450px) {
+    width: 90%;
+  }
+}
+
+/* take section ends here */

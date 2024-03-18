@@ -431,7 +431,7 @@ body {
     padding-top: 1rem;
 
     @media (max-width: 576px) {
-      width: 100px;
+      width: 200px;
     }
     p {
       font-size: 28px;
@@ -446,6 +446,7 @@ body {
 
       @media (max-width: 576px) {
         font-size: 18px;
+        padding-left: 2rem;
       }
     }
 
@@ -455,6 +456,10 @@ body {
 
     img {
       cursor: pointer;
+
+      @media (max-width: 576px) {
+        padding-left: 2rem;
+      }
     }
   }
 
@@ -467,7 +472,7 @@ body {
       padding-top: 8px;
 
       @media (max-width: 992px) {
-        font-size: 22px;
+        font-size: 18px;
       }
     }
 
@@ -536,7 +541,7 @@ body {
   }
 
   @media (max-width: 576px) {
-    min-height: 50vh;
+    min-height: 60vh;
   }
 
   h2 {
@@ -576,8 +581,8 @@ body {
 
   @media (max-width: 576px) {
     display: block;
-    height: 300px;
-    width: 250px;
+    height: 320px;
+    width: 270px;
   }
 }
 

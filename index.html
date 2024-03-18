@@ -16,7 +16,7 @@
   <body>
     <!-- nav wrapper starts from here -->
 
-    <div class="hero-BG">
+    <div id="hero-wrapper" class="hero-BG">
       <img class="hero-bg-main" src="/images/hero-bg.png" />
       <div class="container">
         <div class="nav-wrapper">
@@ -57,7 +57,7 @@
     <!-- intro section starts from here -->
     <div class="intro-features-main">
       <img class="features-BG" src="/images/features-main-BG.png" />
-      <div class="intro-section">
+      <div id="intro-wrapper" class="intro-section">
         <div class="container">
           <h2>INTRODUCTION</h2>
 
@@ -91,8 +91,8 @@
 
       <!-- features section starts from here -->
 
-      <div class="features-container">
-        <div class="container">
+      <div id="features" class="features-container">
+        <div id="features-wrapper" class="container">
           <h2>FEATURES</h2>
           <div class="features-wrapper">
             <div>
@@ -142,7 +142,9 @@
       <img class="take-BG" src="/images/take-section-BG.png" />
 
       <div class="container">
+        <h2>Tokenomics</h2>
         <img class="take-image" src="/images/take-section-image.png" />
+        <img class="rotated-image" src="/images/take-roateted-image.png" />
       </div>
     </div>
 
@@ -174,10 +176,13 @@
             </div>
             <div class="footer-main">
               <h2>Links</h2>
-              <p>GPU Tester</p>
-              <p>Introduction</p>
-              <p>Features</p>
-              <p>FAQ’s</p>
+              <a href="#hero-wrapper"> GPU Tester</a>
+              <br />
+              <a href="#intro-wrapper">Introduction</a>
+              <br />
+              <a href="#features-wrapper">Features</a>
+              <br />
+              <a href="#faqs">FAQ’s</a>
             </div>
             <div class="footer-main">
               <h2>Find Us</h2>
@@ -190,7 +195,6 @@
         <p class="footer-reserved">All right reserved 2024</p>
       </div>
     </div>
-
     <!-- transform section ends here -->
   </body>
 </html>
